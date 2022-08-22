@@ -1,0 +1,65 @@
+doctype html
+head
+  meta(charset='utf-8')
+  meta(http-equiv='X-UA-Compatible' content='IE=edge')
+  meta(name='viewport' content='width=device-width, initial-scale=1')
+  link(rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css')
+  link(href='https://fonts.googleapis.com/css?family=Droid+Sans:400,700' rel='stylesheet')
+  link(rel='stylesheet' href='https://rawgit.com/LeshikJanz/libraries/master/Bootstrap/baguetteBox.min.css')
+  link(rel='stylesheet' href='../css/styles.css')
+  // for footer starts
+  link(rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css')
+  link(rel='stylesheet' href='assets/css/style.css')
+  script(src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js')
+  script(src='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/js/bootstrap.bundle.min.js')
+  // for footer ends
+  script(src='https://code.jquery.com/jquery-3.3.1.slim.min.js' integrity='sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo' crossorigin='anonymous')
+  script(src='https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js' integrity='sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1' crossorigin='anonymous')
+  script(src='https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js' integrity='sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM' crossorigin='anonymous')
+  link(rel='stylesheet' href='https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css' integrity='sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T' crossorigin='anonymous')
+  title Contact
+.container.gallery-container
+  // nav
+  ul.nav.nav-tabs
+    li.nav-item
+      a.nav-link(href='#') Home
+    li.nav-item
+      a.nav-link(href='#') Artists
+    li.nav-item
+      a.nav-link.active(href='#') Contact
+  // nav end
+  .container.contact-form
+    .contact-image
+      img(src='https://image.ibb.co/kUagtU/rocket_contact.png' alt='rocket_contact')
+    form(method='post')
+      h3 Drop TrendyArt a Message
+      .row
+        .col-md-6
+          .form-group
+            input.form-control(type='text' name='txtName' placeholder='Your Name *' value='')
+          .form-group
+            input.form-control(type='text' name='txtEmail' placeholder='Your Email *' value='')
+          .form-group
+            input.form-control(type='text' name='txtPhone' placeholder='Your Phone Number *' value='')
+          .form-group
+            input.btnContact(type='submit' name='btnSubmit' value='Send Message')
+        .col-md-6
+          .form-group
+            textarea.form-control(name='txtMsg' placeholder='Your Message *' style='width: 100%; height: 150px;')
+  .footer-basic
+    footer
+      h1 TrendyArt
+      h2(style='text-align: center')
+        | TrendyArt is an art collection website
+        br
+        |  where you can scan through latest
+        |                 trendy art
+      ul.list-inline
+        li.list-inline-item
+          a(href='#') Home
+        li.list-inline-item
+          a(href='#') Artists
+        li.list-inline-item
+          a(href='#') Contact
+      p.copyright Trendy Art &copy; 2022
+// footer
