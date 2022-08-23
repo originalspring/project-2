@@ -1,0 +1,120 @@
+extends index
+
+block content
+
+  // nav
+  ul.nav.nav-tabs
+    li.nav-item
+      a.nav-link(href='/') Home
+    li.nav-item
+      a.nav-link.active(href='/artists') Artists
+    li.nav-item
+      a.nav-link(href='/register') Register
+    li.nav-item
+      a.nav-link(href='/login') Login
+  // nav end
+  div
+    h1(style='margin:4%') Today Star
+  // 3 columns images starts
+  .cards-wrapper
+    .card
+      img.card-img-top(src='https://raw.githubusercontent.com/LeshikJanz/libraries/master/Related%20images/Bootstrap%20example/coast.jpg' alt='...')
+      .card-body
+        h5.card-title Card title
+        p.card-text
+          | Some quick example text to build on the card title and make up the bulk of the card&apos;s
+          | content.
+        // <a href="#" class="btn btn-primary">Go somewhere</a>
+    .card
+      img.card-img-top(src='https://raw.githubusercontent.com/LeshikJanz/libraries/master/Related%20images/Bootstrap%20example/coast.jpg' alt='...')
+      .card-body
+        h5.card-title Card title
+        p.card-text
+          | Some quick example text to build on the card title and make up the bulk of the card&apos;s
+          | content.
+        // <a href="#" class="btn btn-primary">Go somewhere</a>
+    .card
+      img.card-img-top(src='https://raw.githubusercontent.com/LeshikJanz/libraries/master/Related%20images/Bootstrap%20example/coast.jpg' alt='...')
+      .card-body
+        h5.card-title Card title
+        p.card-text
+          | Some quick example text to build on the card title and make up the bulk of the card&apos;s
+          | content.
+        // <a href="#" class="btn btn-primary">Go somewhere</a>
+  // 3 columns images ends
+  // <p class="page-description text-center">Fluid Layout With Overlay Effect</p>
+  // galalerry1
+  .container.gallery-container
+    h1 Trendy Artists
+    .tz-gallery
+      // artist 1
+      .row(style='margin-top:100px')
+        .col-sm-8.col-md-8
+          a.lightbox(href='https://raw.githubusercontent.com/LeshikJanz/libraries/master/Related%20images/Bootstrap%20example/traffic.jpg')
+            img(src='https://raw.githubusercontent.com/LeshikJanz/libraries/master/Related%20images/Bootstrap%20example/traffic.jpg' alt='Traffic')
+        .col-sm-4.col-md-4
+          div
+            a.lightbox(href='https://raw.githubusercontent.com/LeshikJanz/libraries/master/Related%20images/Bootstrap%20example/rails.jpg')
+              img(src='https://raw.githubusercontent.com/LeshikJanz/libraries/master/Related%20images/Bootstrap%20example/rails.jpg' alt='Coast')
+          div
+            .col-sm-2.col-md-4
+              img(style='width: 120%; margin-top:30%;' src='https://raw.githubusercontent.com/LeshikJanz/libraries/master/Related%20images/Bootstrap%20example/rails.jpg')
+            .col-sm-10.col-md-8
+              h1(style='align-items: center;') Jackie Chen
+              h4(style='margin-top:20px')
+                | An artist focused on the city photography. Grown up in China, he experienced multiculture migration
+                p
+      // artist 2
+      .row(style='margin-top:100px')
+        .col-sm-8.col-md-8
+          a.lightbox(href='https://raw.githubusercontent.com/LeshikJanz/libraries/master/Related%20images/Bootstrap%20example/traffic.jpg')
+            img(src='https://raw.githubusercontent.com/LeshikJanz/libraries/master/Related%20images/Bootstrap%20example/traffic.jpg' alt='Traffic')
+        .col-sm-4.col-md-4
+          div
+            a.lightbox(href='https://raw.githubusercontent.com/LeshikJanz/libraries/master/Related%20images/Bootstrap%20example/rails.jpg')
+              img(src='https://raw.githubusercontent.com/LeshikJanz/libraries/master/Related%20images/Bootstrap%20example/rails.jpg' alt='Coast')
+          div
+            .col-sm-2.col-md-4
+              img(style='width: 120%; margin-top:30%;' src='https://raw.githubusercontent.com/LeshikJanz/libraries/master/Related%20images/Bootstrap%20example/rails.jpg')
+            .col-sm-10.col-md-8
+              h1(style='align-items: center;') Jackie Chen
+              h4(style='margin-top:20px')
+                | An artist focused on the city photography. Grown up in China, he experienced
+                | multiculture migration
+        // artist 3
+        .row(style='margin-top:100px')
+          .col-sm-8.col-md-8
+            a.lightbox(href='https://raw.githubusercontent.com/LeshikJanz/libraries/master/Related%20images/Bootstrap%20example/traffic.jpg')
+              img(src='https://raw.githubusercontent.com/LeshikJanz/libraries/master/Related%20images/Bootstrap%20example/traffic.jpg' alt='Traffic')
+          .col-sm-4.col-md-4
+            div
+              a.lightbox(href='https://raw.githubusercontent.com/LeshikJanz/libraries/master/Related%20images/Bootstrap%20example/rails.jpg')
+                img(src='https://raw.githubusercontent.com/LeshikJanz/libraries/master/Related%20images/Bootstrap%20example/rails.jpg' alt='Coast')
+            div
+              .col-sm-2.col-md-4
+                img(style='width: 120%; margin-top:30%;' src='https://raw.githubusercontent.com/LeshikJanz/libraries/master/Related%20images/Bootstrap%20example/rails.jpg')
+              .col-sm-10.col-md-8
+                h1(style='align-items: center;') Jackie Chen
+                h4(style='margin-top:20px')
+                  | An artist focused on the city photography. Grown up in China, he experienced
+                  | multiculture migration
+  
+    // comment start
+    script(src='https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.8.1/baguetteBox.min.js')
+    script.
+      baguetteBox.run('.tz-gallery');
+ 
+  .footer-basic
+    footer
+      h1 TrendyArt
+      h2(style='text-align: center')
+        | TrendyArt is an art collection website
+        br
+        |  where you can scan through latest trendy art
+      ul.list-inline
+        li.list-inline-item
+          a(href='/home') Home
+        li.list-inline-item
+          a(href='/artists') Artists
+      p.copyright Trendy Art &copy; 2022
+      

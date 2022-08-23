@@ -1,0 +1,54 @@
+extends index
+
+block content
+  // nav
+  ul.nav.nav-tabs
+    li.nav-item
+      a.nav-link(href='/') Home
+    li.nav-item
+      a.nav-link(href='/artists') Artists
+    
+    li.nav-item
+      a.nav-link.active(href='') Register
+    li.nav-item
+      a.nav-link(href='/login') Login
+  // nav end
+  
+  //Display front end vaidation errors
+  -data = data || {}
+  if errors
+    ul
+    for error in errors
+      li.validerrors= error.msg
+    //a.btn.btn-primary(href='/register') Try Again
+  h1 Sign Up
+  p Please fill in this form to create an account.
+  hr
+  form(action="/xxx" method="POST")
+    label(for='username')
+      b Username
+    input(type='text' placeholder='Enter Username' id="username" name='username' value=data.username)
+    label(for='password')
+      b Password
+    input(type='password' placeholder='Enter Password' id="password" name='password' value=data.password)
+    label(for='email')
+      b Email
+    input(type='text' placeholder='Enter Email' id="email" name='email' value=data.email)
+    .clearfix
+      button.cancelbtn(type='button' onclick="document.getElementById('id01').style.display='none'") Cancel
+      button.signupbtn(type='submit') Sign Up
+
+  footer.footer-basic
+    h1 TrendyArt
+    h2(style='text-align: center')
+      | TrendyArt is an art collection website
+      br
+      |  where you can scan through latest trendy art
+    ul.list-inline
+      li.list-inline-item
+        a(href='#') Home
+      li.list-inline-item
+        a(href='#') Artists
+      li.list-inline-item
+        a(href='#') Contact
+    p.copyright Trendy Art &copy; 2022

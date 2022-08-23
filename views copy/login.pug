@@ -1,0 +1,50 @@
+extends index
+
+block content
+  // nav
+  ul.nav.nav-tabs
+    li.nav-item
+      a.nav-link(href='/') Home
+    li.nav-item
+      a.nav-link(href='/artists') Artists
+    li.nav-item
+      a.nav-link(href='/register') Register 
+    li.nav-item
+      a.nav-link.active(href='/login') Login
+
+  #login-form-wrap
+    h2 Login
+    form#login-form(action ="/xx1" method="POST")
+      p
+        input#username(type='text' name='username' placeholder='Username')
+        i.validation
+          span
+          span
+      p
+        input#password(type='password' name='password' placeholder='Password')
+        i.validation
+          span
+          span
+      p
+        input#login(type='submit' value='Login')
+  #create-account-wrap
+    p
+      | Not a member? 
+      a(href='#') Create Account
+    p
+
+
+  .footer-basic
+    footer
+      h1 TrendyArt
+      h2(style='text-align: center')
+        | TrendyArt is an art collection website
+        br
+        |  where you can scan through latest trendy art
+      ul.list-inline
+        li.list-inline-item
+          a(href='/') Home
+        li.list-inline-item
+          a(href='/artists') Artists
+      p.copyright Trendy Art &copy; 2022
+      

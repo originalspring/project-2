@@ -1,0 +1,108 @@
+extends index
+
+block content
+  // nav
+  ul.nav.nav-tabs
+    li.nav-item
+      a.nav-link.active(href='/') Home
+    li.nav-item
+      a.nav-link(href='/artists') Artists
+ 
+    li.nav-item
+      a.nav-link(href='/register') Register
+    li.nav-item
+      a.nav-link(href='/login') Login
+  // nav end
+  // Carousal
+  #carouselExampleSlidesOnly.carousel.slide(data-ride='carousel')
+    .carousel-inner
+      .carousel-item.active(style='')
+        img.d-block.w-100(src='https://raw.githubusercontent.com/LeshikJanz/libraries/master/Related%20images/Bootstrap%20example/bridge.jpg' alt='...')
+        .carousel-caption.d-none.d-md-block
+          h5 First slide label
+          p Nulla vitae elit libero, a pharetra augue mollis interdum.
+      .carousel-item
+        img.d-block.w-100(src='https://raw.githubusercontent.com/LeshikJanz/libraries/master/Related%20images/Bootstrap%20example/park.jpg' alt='...')
+        .carousel-caption.d-none.d-md-block
+          h5 First slide label
+          p Nulla vitae elit libero, a pharetra augue mollis interdum.
+      .carousel-item
+        img.d-block.w-100(src='https://raw.githubusercontent.com/LeshikJanz/libraries/master/Related%20images/Bootstrap%20example/coast.jpg' alt='...')
+        .carousel-caption.d-none.d-md-block
+          h5 First slide label
+          p Nulla vitae elit libero, a pharetra augue mollis interdum.
+  // Carousal
+  h1 Modern Paintings
+  // <p class="page-description text-center">Fluid Layout With Overlay Effect</p>
+  // galalerry1
+  .tz-gallery
+    .row
+      .col-sm-12.col-md-4
+        a.lightbox(href='https://raw.githubusercontent.com/LeshikJanz/libraries/master/Related%20images/Bootstrap%20example/bridge.jpg')
+          img(src='https://raw.githubusercontent.com/LeshikJanz/libraries/master/Related%20images/Bootstrap%20example/bridge.jpg' alt='Bridge')
+      .col-sm-6.col-md-4
+        a.lightbox(href='https://raw.githubusercontent.com/LeshikJanz/libraries/master/Related%20images/Bootstrap%20example/park.jpg')
+          img(src='https://raw.githubusercontent.com/LeshikJanz/libraries/master/Related%20images/Bootstrap%20example/park.jpg' alt='Park')
+        // comment modal
+        // button1
+        button(onclick="document.getElementById('id01').style.display='block'" style='width:auto;') Add Comments
+        #id01.modal
+          span.close(onclick="document.getElementById('id01').style.display='none'" title='Close Modal') &times;
+          form.modal-content(action='/action_page.php')
+            .container
+              h1 Add Comments
+              hr
+              label(for='email')
+                b Your Comments
+              input(type='text' v-model='message' placeholder='Add you comment here' required='')
+              .clearfix
+                button.cancelbtn(type='button' onclick="document.getElementById('id01').style.display='none'") Cancel
+                button.signupbtn(type='submit') Submit
+        // button1 ends
+        #id01.modal
+          span.close(onclick="document.getElementById('id01').style.display='none'" title='Close Modal') &times;
+          form.modal-content(action='/action_page.php')
+            .container
+              h1 Add Comments
+              hr
+              label(for='email')
+                b Your Comments
+              input(type='text' v-model='message' placeholder='Add you comment here' required='')
+              .clearfix
+                button.cancelbtn(type='button' onclick="document.getElementById('id01').style.display='none'") Cancel
+                button.signupbtn(type='submit') Submit
+        // comment modal
+        #comments
+          h3 Latest comments
+          usercomment {{message}}
+      .col-sm-6.col-md-4
+        a.lightbox(href='https://raw.githubusercontent.com/LeshikJanz/libraries/master/Related%20images/Bootstrap%20example/tunnel.jpg')
+          img(src='https://raw.githubusercontent.com/LeshikJanz/libraries/master/Related%20images/Bootstrap%20example/tunnel.jpg' alt='Tunnel')
+      .col-sm-6.col-md-4
+        a.lightbox(href='https://raw.githubusercontent.com/LeshikJanz/libraries/master/Related%20images/Bootstrap%20example/coast.jpg')
+          img(src='https://raw.githubusercontent.com/LeshikJanz/libraries/master/Related%20images/Bootstrap%20example/coast.jpg' alt='Rails')
+      .col-sm-6.col-md-4
+        a.lightbox(href='https://raw.githubusercontent.com/LeshikJanz/libraries/master/Related%20images/Bootstrap%20example/coast.jpg')
+          img(src='https://raw.githubusercontent.com/LeshikJanz/libraries/master/Related%20images/Bootstrap%20example/coast.jpg' alt='Rails')
+      .col-sm-6.col-md-4
+        a.lightbox(href='https://raw.githubusercontent.com/LeshikJanz/libraries/master/Related%20images/Bootstrap%20example/coast.jpg')
+          img(src='https://raw.githubusercontent.com/LeshikJanz/libraries/master/Related%20images/Bootstrap%20example/coast.jpg' alt='Rails')
+  // footer
+  .footer-basic
+    footer
+      h1 TrendyArt
+      h2(style='text-align: center')
+        | TrendyArt is an art collection website
+        br
+        |  where you can scan through latest trendy art
+      ul.list-inline
+        li.list-inline-item
+          a(href='/home') Home
+        li.list-inline-item
+          a(href='/artists') Artists
+      p.copyright Trendy Art &copy; 2022
+      
+  // comment start
+  script(src='https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.8.1/baguetteBox.min.js')
+  script.
+    baguetteBox.run('.tz-gallery');
